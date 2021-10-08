@@ -76,6 +76,20 @@ void ParkingLot::leave(int slotNo) {
     }
 }
 
+void ParkingLot::getSlotNumbersFromAge(int age) {
+    if (this->MAX_SIZE == 0) {
+        cout<<"Sorry, parking lot is not created"<<endl;
+    } else if (ageToSlot[age].size()>0){
+        cout<<"Following are the slots occupied by the drivers of age "<<age<<endl;
+        for(int slot:ageToSlot[age]){
+            cout<<slot<<" ";
+
+        }
+        cout<<endl;
+    } else {
+        cout<<"Not found"<<endl;
+    }
+}
 
 void ParkingLot::getRegistrationNumbersFromAge(int age)  {
     if (this->MAX_SIZE == 0) {
