@@ -25,12 +25,15 @@ emotion_model.add(Conv2D(128, kernel_size=(3, 3), activation='relu'))
 emotion_model.add(MaxPooling2D(pool_size=(2, 2)))
 emotion_model.add(Dropout(0.25))
 
+
+
+
+
 emotion_model.add(Flatten())
 emotion_model.add(Dense(1024, activation='relu'))
 emotion_model.add(Dropout(0.5))
 emotion_model.add(Dense(7, activation='softmax'))
 emotion_model.load_weights('model.h5')
-
 cv2.ocl.setUseOpenCL(False)
 
 emotion_dict = {0: "   Angry   ", 1: "Disgusted", 2: "  Fearful  ", 3: "   Happy   ", 4: "  Neutral  ", 5: "    Sad    ", 6: "Surprised"}
@@ -87,7 +90,25 @@ def show_vid2():
     
     lmain2.configure(image=imgtk2)
     lmain2.after(10, show_vid2)
+if _name_ == '_main_':
+    root=tk.Tk()   
+    img = ImageTk.PhotoImage(Image.open("logo.png"))
+    heading = Label(root,image=img,bg='black')
+    
+    heading.pack() 
+    heading2=Label(root,text="Photo to Emoji",pady=20, font=('arial',45,'bold'),bg='black',fg='#CDCDCD')                                 
+    
+    heading2.pack()
+    lmain = tk.Label(master=root,padx=50,bd=10)
+    lmain2 = tk.Label(master=root,bd=10)
 
+    lmain3=tk.Label(master=root,bd=10,fg="#CDCDCD",bg='black')
+    lmain.pack(side=LEFT)
+    lmain.place(x=50,y=250)
+    lmain3.pack()
+    lmain3.place(x=960,y=250)
+    lmain2.pack(side=RIGHT)
+    lmain2.place(x=900,y=350)
 
     
 
