@@ -327,4 +327,19 @@ void deposit_withdraw(int n, int option)
 	if(found==false)
 		cout<<"\n\n\t\t\tRecord Not Found ";
 }
+void account::create_account()
+{
+	system("CLS");
+	cout<<"\n\t\t\tEnter the Account No. : ";
+	cin>>acno;
+	cout<<"\n\n\t\t\tEnter the Name of the Account holder : ";
+	cin.ignore();
+	cin.getline(name,50);
+	cout<<"\n\t\t\tEnter Type of the Account (C/S) : ";
+	cin>>type;
+	type=toupper(type);
+	cout<<"\n\t\t\tEnter The Initial amount : ";
+	cin>>deposit;
+	cout<<"\n\n\t\t\tAccount Created..";
+}
 
