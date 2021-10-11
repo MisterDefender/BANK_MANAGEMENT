@@ -80,16 +80,7 @@ def show_vid():
         exit()
 
 
-def show_vid2():
-    frame2=cv2.imread(emoji_dist[show_text[0]])
-    pic2=cv2.cvtColor(frame2,cv2.COLOR_BGR2RGB)
-    img2=Image.fromarray(frame2)
-    imgtk2=ImageTk.PhotoImage(image=img2)
-    lmain2.imgtk2=imgtk2
-    lmain3.configure(text=emotion_dict[show_text[0]],font=('arial',45,'bold'))
-    
-    lmain2.configure(image=imgtk2)
-    lmain2.after(10, show_vid2)
+
 if _name_ == '_main_':
     root=tk.Tk()   
     img = ImageTk.PhotoImage(Image.open("logo.png"))
