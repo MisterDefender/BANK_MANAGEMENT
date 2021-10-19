@@ -156,3 +156,24 @@ hist = model.fit(np.array(train_x), np.array(train_y), epochs=200, batch_size=5,
 model.save('chatbot_model.h5', hist)
 
 print("model created")
+
+#Aditya codes
+l = int(input("enter the length" ))
+b =int(input("enter the breath"))
+h =int(input("enter the height"))
+r =int(input("enter the radius"))
+
+volume_of_cubiod = l*b*h
+
+volume_of_ball= 4*r*r*r
+
+no_of_balls= volume_of_cubiod/volume_of_ball
+
+print(no_of_balls)
+
+
+
+
+
+
+
